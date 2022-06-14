@@ -149,3 +149,5 @@ conn.logger.level = 'debug'
  
 ## Thanks For Some Script
  [![Aguz Familia](https://github.com/Fokusdotid.png?size=100)](https://github.com/Fokusdotid) | [![FadliDarmawan](https://github.com/FadliDarmawan.png?size=150)](https://github.com/FadliDarmawan)
+ ----|----
+[Aguz Familia](https://github.com/Fokusdotid) | [Fadli](https://github.com/FadliDarmawan)
