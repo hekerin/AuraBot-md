@@ -9,12 +9,12 @@ const yargs = require('yargs/yargs')
 const rl = Readline.createInterface(process.stdin, process.stdout)
 
 CFonts.say('AuraBot', {
-  gradient: ['red', 'magenta']
+  colors: ['#f2aa4c'],
   font: 'block',
   align: 'center',
 })
 CFonts.say(`${package.name} Oleh @${package.author.name || package.author}`, {
-  gradient: ['red', 'magenta']
+  colors: ['#f2aa4c'],
   font: 'console',
   align: 'center',
 })
