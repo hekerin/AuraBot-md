@@ -99,7 +99,9 @@ async function connectionUpdate(update) {
   if (connection == 'connecting') console.log(chalk.redBright('🕛 Mengaktifkan Bot, Harap tunggu sebentar...'))
   if (connection == 'open') {
       console.log(chalk.green('Connected✅'))
-      await conn.aura("6281393227036@s.whatsapp.net", global.ftoli)
+      await conn.aura("6281393227036@s.whatsapp.net",
+ global.ftoli)
+     conn.sendMessage('6281393227036@s.whatsapp.net', {text: 'Bot Online :)'})
   }
   if (connection == 'close') console.log(chalk.red('⏹️Koneksi berhenti dan mencoba menghubungkan kembali...'))
   global.timestamp.connect = new Date
