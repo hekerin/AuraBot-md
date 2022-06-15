@@ -19,6 +19,8 @@ handler.before = async function (m) {
                 pack: global.packname,
                 author: global.author,
                 crop: false,
+                type: 'full',
+                quality: 30,
             })
         } else if (/video/.test(mime)) {
             if ((q.msg || q).seconds > 11) return m.reply('Maksimal 10 detik!')
@@ -27,7 +29,9 @@ handler.before = async function (m) {
             wsf = new WSF.Sticker(img, {
                 pack: global.packname,
                 author: global.author,
-                crop: false,
+                crop: true,
+                type: 'full',
+                quality: 10,
             })
         } else if (m.text.split` `[0]) {
             if (isUrl(m.text.split` `[0])) stiker = await sticker(false, m.text.split` `[0], global.packname, global.author)
@@ -58,4 +62,4 @@ module.exports = handler
 
 const isUrl = (text) => {
     return text.match(new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&/=]*)(jpe?g|gif|png)/, 'gi'))
-}
+          }

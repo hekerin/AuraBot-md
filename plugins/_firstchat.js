@@ -10,11 +10,11 @@ handler.all = async function (m, { isBlocked }) {
     if (new Date - user.pc < 86400000) return // setiap 24 jam sekali
     let anu = `
 Hai ${await this.getName(m.sender)}, ${ucapan()}
-Saya adalah AuraBot, salah satu bot whatsapp multi device ada yang bisa saya bantu?
-
-Kamu bisa menggunakan AuraBot untuk membuat sticker, mendownload video youtube, facebook, tiktok, instagram, atau hanya sekedar bersenang senang! Fitur selengkapnya tentang Aurabot bisa di lihat di *.menu*
+Saya adalah Rho_Bot, salah satu bot whatsapp multi device ada yang bisa saya bantu? 
+Sebelum menggunakan bot, baca rules bot terlebih dahulu dengan mengetik *#peraturan* atau *#rules*.
+Mau chat sama simi(bot)? ketik *#on simi*
 `
-await conn.send3ButtonImg(m.chat, await (await fetch('https://telegra.ph/file/a04269b1f8d8de7398e66.jpg')).buffer(), anu.trim(), wm, `Menu`, `.menu`, `Donasi`, `.donasi`)
+await conn.send3ButtonImg(m.chat, await (await fetch('https://telegra.ph/file/a04269b1f8d8de7398e66.jpg')).buffer(), anu.trim(), wm, `Menu Utama`, `.menu`, `Menu Topup`, `.topup`, `Donasi`, `.donasi`)
 user.pc = new Date * 1
 }
 
