@@ -37,7 +37,7 @@ global.APIKeys = { // APIKey Here
   'https://leyscoders-api.herokuapp.com': 'apikeylu',
   'https://api.adiofficial.xyz': 'apikey lu'
 }
-//Global Wait And Error
+//============= Wait And Eror =============//
 global.wait = '「 ⏱️ 」Harap tunggu...'
 global.eror = '「❗」Server ERROR!'
 
@@ -54,9 +54,13 @@ global.benar = '_*Benar✅*_'
 global.salah = '_*Salah❌*_'
 global.dikit = "dikit lagi, semangat ya :')"
 global.wm = '© AuraBot'
+
+//============= Thumbnail ================//
+global.img = pickRandom(global.waifu)
+global.fla = pickRandom(global.flaaa)
 global.pp = 'https://telegra.ph/file/39bbded9693c9338069fd.jpg'
 global.image = 'https://telegra.ph/file/39bbded9693c9338069fd.jpg'
-
+global.thumbfoto = 'http://telegra.ph/file/29f2d451412ae151a2dfb.jpg'
 global.multiplier = 100 // The higher, The harder levelup
 
 //=========== Requirements ==========//
