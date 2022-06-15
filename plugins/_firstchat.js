@@ -10,11 +10,16 @@ handler.all = async function (m, { isBlocked }) {
     if (new Date - user.pc < 86400000) return // setiap 24 jam sekali
     let anu = `
 Hai ${await this.getName(m.sender)}, ${ucapan()}
-Saya adalah Rho_Bot, salah satu bot whatsapp multi device ada yang bisa saya bantu? 
-Sebelum menggunakan bot, baca rules bot terlebih dahulu dengan mengetik *#peraturan* atau *#rules*.
-Mau chat sama simi(bot)? ketik *#on simi*
+Perkenalkan aku adalah AuraBot!
+Kamu bisa menggunakan Haruno untuk membuat sticker, mendownload video youtube, facebook, tiktok, instagram, atau hanya sekedar bersenang senang! Fitur selengkapnya tentang Haruno bisa di lihat di *.menu*
+
+Kami tidak akan melakukan spam broadcast ke users.
+
+Jangan lupa patuhi rules, dan harap tidak menelpon, vc, spam, mengirimkan bug atau virtex ke nomor bot.
+Jika ada bug atau hal yang ingin ditanyakan silahkan menghubungi owner.
+Terimakasih!
 `
-await conn.send3ButtonImg(m.chat, await (await fetch('https://telegra.ph/file/a04269b1f8d8de7398e66.jpg')).buffer(), anu.trim(), wm, `Menu Utama`, `.menu`, `Menu Topup`, `.topup`, `Donasi`, `.donasi`)
+await conn.send3ButtonImg(m.chat, await (await fetch(thumbfoto)).buffer(), anu.trim(), wm, `Menu Utama`, `Donasi`, `.donasi`)
 user.pc = new Date * 1
 }
 
