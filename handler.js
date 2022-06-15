@@ -24,6 +24,9 @@ module.exports = {
         global.settings = global.db.data.settings
         global.pickRandom = pickRandom
         global.doc = pickRandom(["application/vnd.ms-excel", "application/vnd.openxmlformats-officedocument.presentationml.presentation", "application/msword", "application/pdf"])
+        global.img = pickRandom(global.waifu)
+        global.fla = pickRandom(global.flaaa)
+
         global.bg = await (await fetch(img)).buffer()
         global.time = require('moment-timezone').tz('Asia/Jakarta').format('HH:mm:ss')
 
