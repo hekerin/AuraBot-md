@@ -2,6 +2,17 @@
 
 <a href = "https://github.com/RFIunknown/AuraBot-md"><img src = "https://cardivo.vercel.app/api?name=AuraBot-md&description=AuraBot,%20Bot%20WhatsApp%20multi%20device.%20Created%20by%20Nurutomo,%20BochilGaming,%20and%20RFIunknown.&image=http://telegra.ph/file/29f2d451412ae151a2dfb.jpg?cb=20200606024545&usqp=CAU&usqp=CAU&backgroundColor=%23ecf0f1&github=RFIunknown&pattern=topography&colorPattern=%23eaeaea"/><a>
 
+ <a href="https://visitor-badge.glitch.me/badge?page_id=RFIunknown/AuraBot-md"><img title="Visitor" src="https://visitor-badge.glitch.me/badge?page_id=RFIunknown/AuraBot-md"></a>
+<a href="https://github.com/RFIunknown/AuraBot-md/network/members"><img title="Forks" src="https://img.shields.io/github/forks/RFIunknown/AuraBot-md?label=Forks&color=blue&style=flat-square"></a>
+<a href="https://github.com/RFIunknown/AuraBot-md/watchers"><img title="Watchers" src="https://img.shields.io/github/watchers/RFIunknown/AuraBot-md?label=Watchers&color=green&style=flat-square"></a>
+<a href="https://github.com/RFIunknown/AuraBot-md/stargazers"><img title="Stars" src="https://img.shields.io/github/stars/RFIunknown/AuraBot-md?label=Stars&color=yellow&style=flat-square"></a>
+<a href="https://github.com/RFIunknown/AuraBot-md/graphs/contributors"><img title="Contributors" src="https://img.shields.io/github/contributors/RFIunknown/AuraBot-md?label=Contributors&color=blue&style=flat-square"></a>
+<a href="https://github.com/RFIunknown/AuraBot-md/issues"><img title="Issues" src="https://img.shields.io/github/issues/RFIunknown/AuraBot-md?label=Issues&color=success&style=flat-square"></a>
+<a href="https://github.com/RFIunknown/AuraBot-md/issues?q=is%3Aissue+is%3Aclosed"><img title="Issues" src="https://img.shields.io/github/issues-closed/RFIunknown/AuraBot-md?label=Issues&color=red&style=flat-square"></a>
+<a href="https://github.com/RFIunknown/AuraBot-md/pulls"><img title="Pull Request" src="https://img.shields.io/github/issues-pr/RFIunknown/AuraBot-md?label=PullRequest&color=success&style=flat-square"></a>
+<a href="https://github.com/RFIunknown/AuraBot-md/pulls?q=is%3Apr+is%3Aclosed"><img title="Pull Request" src="https://img.shields.io/github/issues-pr-closed/RFIunknown/AuraBot-md?label=PullRequest&color=red&style=flat-square"></a>
+
+
 ## Grup Bot
 [![Grup WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/BKUUviabCwFIr9pIRe9iuE)
 
