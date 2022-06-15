@@ -210,7 +210,9 @@ else:
 
     def print_(*args, **kwargs):
         """The new-style print function for Python 2.4 and 2.5.
+
         Taken from https://pypi.python.org/pypi/six/
+
         Modified to set encoding to UTF-8 always, and to flush after write
         """
         fp = kwargs.pop("file", sys.stdout)
@@ -374,6 +376,7 @@ class SpeedtestMissingBestServer(SpeedtestException):
 def create_connection(address, timeout=_GLOBAL_DEFAULT_TIMEOUT,
                       source_address=None):
     """Connect to *address* and return the socket object.
+
     Convenience function.  Connect to *address* (a 2-tuple ``(host,
     port)``) and return the socket object.  Passing the optional
     *timeout* parameter will set the timeout on the socket instance
@@ -382,6 +385,7 @@ def create_connection(address, timeout=_GLOBAL_DEFAULT_TIMEOUT,
     is used.  If *source_address* is set it must be a tuple of (host, port)
     for the socket to bind as a source address before making the connection.
     An host of '' or port 0 tells the OS to use the default.
+
     Largely vendored from Python 2.7, modified to work with Python 2.4
     """
 
@@ -514,6 +518,7 @@ if HTTPSConnection:
 def _build_connection(connection, source_address, timeout, context=None):
     """Cross Python 2.4 - Python 3 callable to build an ``HTTPConnection`` or
     ``HTTPSConnection`` with the args we need
+
     Called from ``http(s)_open`` methods of ``SpeedtestHTTPHandler`` or
     ``SpeedtestHTTPSHandler``
     """
@@ -614,6 +619,7 @@ def build_opener(source_address=None, timeout=10):
 class GzipDecodedResponse(GZIP_BASE):
     """A file-like object to decode a response encoded with the gzip
     method, as described in RFC 1952.
+
     Largely copied from ``xmlrpclib``/``xmlrpc.client`` and modified
     to work for py2.4-py3
     """
@@ -684,7 +690,9 @@ def build_user_agent():
 
 def build_request(url, data=None, headers=None, bump='0', secure=False):
     """Build a urllib2 request object
+
     This function automatically adds a User-Agent header to all requests
+
     """
 
     if not headers:
@@ -719,6 +727,7 @@ def build_request(url, data=None, headers=None, bump='0', secure=False):
 def catch_request(request, opener=None):
     """Helper function to catch common exceptions encountered when
     establishing a connection with a HTTP/HTTPS request
+
     """
 
     if opener:
@@ -739,6 +748,7 @@ def catch_request(request, opener=None):
 def get_response_stream(response):
     """Helper function to return either a Gzip reader if
     ``Content-Encoding`` is ``gzip`` otherwise the response itself
+
     """
 
     try:
@@ -755,6 +765,7 @@ def get_response_stream(response):
 def get_attributes_by_tag_name(dom, tag_name):
     """Retrieve an attribute from an XML document and return it in a
     consistent format
+
     Only used with xml.dom.minidom, which is likely only to be used
     with python versions older than 2.5
     """
@@ -923,10 +934,12 @@ class HTTPUploader(threading.Thread):
 
 class SpeedtestResults(object):
     """Class for holding the results of a speedtest, including:
+
     Download speed
     Upload speed
     Ping/Latency to test server
     Data about server that the test was run against
+
     Additionally this class can return a result data as a dictionary or CSV,
     as well as submit a POST of the result data to the speedtest.net API
     to get a share results image link.
@@ -1502,6 +1515,7 @@ class Speedtest(object):
 
     def download(self, callback=do_nothing, threads=None):
         """Test download speed against speedtest.net
+
         A ``threads`` value of ``None`` will fall back to those dictated
         by the speedtest.net configuration
         """
@@ -1576,6 +1590,7 @@ class Speedtest(object):
 
     def upload(self, callback=do_nothing, pre_allocate=True, threads=None):
         """Test upload speed against speedtest.net
+
         A ``threads`` value of ``None`` will fall back to those dictated
         by the speedtest.net configuration
         """
@@ -1781,6 +1796,7 @@ def parse_args():
 def validate_optional_args(args):
     """Check if an argument was provided that depends on a module that may
     not be part of the Python standard library.
+
     If such an argument is supplied, and the module does not exist, exit
     with an error stating which module is missing.
     """

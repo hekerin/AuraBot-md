@@ -23,10 +23,7 @@ try {
   low = require('./lib/lowdb')
 }
 const { Low, JSONFile } = low
-const {
-	mongoDB,
-	MongoDBV2
-} = require('./lib/mongoDB')
+const mongoDB = require('./lib/mongoDB')
 
 simple.protoType()
 
@@ -71,16 +68,16 @@ loadDatabase()
 // if (opts['cluster']) {
 //   require('./lib/cluster').Cluster()
 // }
-const authFile = `${opts._[0] || 'session'}.data.json`
+global.authFile = `${opts._[0] || 'session'}.data.json`
 global.isInit = !fs.existsSync(authFile)
-const { state, saveState } = useSingleFileAuthState(authFile)
+const { state, saveState } = useSingleFileAuthState(global.authFile)
 
 const connectionOptions = {
   printQRInTerminal: true,
   auth: state,
   logger: P({ level: 'silent'}),
   version: [2, 2204, 13],
-  browser: ['AuraBot-MD', 'IOS', '4.1.0']
+  browser: ['AuraBot', 'IOS', '4.1.0']
 }
 
 global.conn = simple.makeWASocket(connectionOptions)
@@ -99,9 +96,6 @@ async function connectionUpdate(update) {
   if (connection == 'connecting') console.log(chalk.redBright('🕛 Mengaktifkan Bot, Harap tunggu sebentar...'))
   if (connection == 'open') {
       console.log(chalk.green('Connected✅'))
-      await conn.aura("6281393227036@s.whatsapp.net",
- global.ftoli)
-     conn.sendMessage('6281393227036@s.whatsapp.net', {text: 'Bot Online :)'})
   }
   if (connection == 'close') console.log(chalk.red('⏹️Koneksi berhenti dan mencoba menghubungkan kembali...'))
   global.timestamp.connect = new Date

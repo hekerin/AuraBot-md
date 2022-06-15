@@ -6,6 +6,13 @@ let package = require('./package.json')
 const CFonts = require('cfonts')
 const Readline = require('readline')
 const yargs = require('yargs/yargs')
+/*
+Start Digiflazz
+*/
+
+
+
+/* End Digiflazz */
 const rl = Readline.createInterface(process.stdin, process.stdout)
 
 CFonts.say('AuraBot', {
