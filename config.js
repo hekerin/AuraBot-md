@@ -1,7 +1,12 @@
 let fs = require('fs')
 
-global.owner = ['6281393227036', '62892964090'] // Put your number here
-global.mods = [] // Want some help?
+let flaaa = JSON.parse(fs.readFileSync('./api/fla.json'))
+let waifu = JSON.parse(fs.readFileSync('./api/waifu.json'))
+let data = JSON.parse(fs.readFileSync('./data.json'))
+
+
+global.owner = JSON.parse(fs.readFileSync('./settings/owner.json')) // Put your number to folder /src/owner.json
+global.mods = JSON.parse(fs.readFileSync('./settings/moderator.json')) // Want some help?
 
 global.APIs = { // API Prefix
   // name: 'https://website'
@@ -32,8 +37,7 @@ global.APIKeys = { // APIKey Here
   'https://leyscoders-api.herokuapp.com': 'apikeylu',
   'https://api.adiofficial.xyz': 'apikey lu'
 }
-
-//============= Wait and Eror ================//
+//Global Wait And Error
 global.wait = '「 ⏱️ 」Harap tunggu...'
 global.eror = '「❗」Server ERROR!'
 
@@ -43,21 +47,25 @@ global.urlnya = "https://www.instagram.com/mas_.giyuu"
 
 //============= callButtons =============//
 global.dtc = 'ᴄᴀʟʟ ᴏᴡɴᴇʀ'
-global.phn = 'wa.me/6281393227036'
+global.phn = '+62 813-9322-7036'
 
 //============= Games ================//
 global.benar = '_*Benar✅*_'
 global.salah = '_*Salah❌*_'
 global.dikit = "dikit lagi, semangat ya :')"
+global.wm = '© AuraBot'
+global.pp = 'https://telegra.ph/file/39bbded9693c9338069fd.jpg'
+global.image = 'https://telegra.ph/file/39bbded9693c9338069fd.jpg'
 
 global.multiplier = 100 // The higher, The harder levelup
 
-//============= Watermark Bot and Sticker =============//
-global.wm = '© AuraBot'
-global.author = '© AuraBot'
-global.packname ='RFIunknown'
-global.namabot = 'AuraBot'
+//=========== Requirements ==========//
 
+global.baileys = require('@adiwajshing/baileys')
+global.fs = require('fs')
+global.data = JSON.parse(fs.readFileSync('./data.json'))
+global.fetch = require('node-fetch')
+global.bochil = require('@bochilteam/scraper')
 
 let chalk = require('chalk')
 let file = require.resolve(__filename)
@@ -67,7 +75,3 @@ fs.watchFile(file, () => {
   delete require.cache[file]
   require(file)
 })
-
-function pickRandom(list) {
-  return list[Math.floor(list.length * Math.random())]
-}
