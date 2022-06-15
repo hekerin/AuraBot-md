@@ -1,6 +1,6 @@
 FROM        --platform=$TARGETOS/$TARGETARCH node:17-bullseye-slim
 
-LABEL       author="RFIunknown" maintainer="40955113+RFIunknown@users.noreply.github.com"
+LABEL       author="FokusDotId" maintainer="40955113+FokusDotId@users.noreply.github.com"
 
 RUN         apt update \
             && apt -y install ffmpeg imagemagick iproute2 git sqlite3 libsqlite3-dev python3 python3-dev ca-certificates dnsutils tzdata zip tar curl build-essential libtool \

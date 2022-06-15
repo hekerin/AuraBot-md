@@ -1,0 +1,7 @@
+{
+  "name": "AuraBot",
+  "description": "WhatsApp Bot Using Library Baileys Multi Device",
+  "repository": "https://github.com/RFIunknown/AuraBot-md",
+  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "keywords": ["bot", "whatsapp", "whatsapp-bot", "AuraBot", "AuraBot-md", "games-wabot", "epic rpg"]
+}
