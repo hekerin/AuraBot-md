@@ -5,9 +5,9 @@ let handler = async(m, { conn }) => {
 	ftroli = { key: { remoteJid: 'status@broadcast', participant: '0@s.whatsapp.net' }, message: { orderMessage: { itemCount: 1, status: 1, surface: 1, message: wm, orderTitle: wm, sellerJid: '0@s.whatsapp.net' } } }
 
 global.kontak2 = [
-  
-['6282229992371', 'Rhosad', 'Re-code', 'Rahasia', true],
-['6281393227036', 'Rifai', 'Source Developer', 'rfiunknown62@gmail.com', true],]
+['628892964090', 'Aura', 'Lover', 'Nothing', true],  
+['6282229992371', 'Rhosad', 'Pengembang Fitur', 'Rahasia', true],
+['6281393227036', 'Rifai', 'Developer', 'rfiunknown62@gmail.com', true],]
 
   
 	fkontak = { key: {participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: `status@broadcast` } : {}) }, message: { 'contactMessage': { 'displayName': wm, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${wm},;;;\nFN:${wm},\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabell:Ponsel\nEND:VCARD`, 'jpegThumbnail': require('fs').readFileSync('./src/logo.jpg'), thumbnail: require('fs').readFileSync('./src/logo.jpg'),sendEphemeral: true}}}
