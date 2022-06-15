@@ -148,6 +148,6 @@ conn.logger.level = 'debug'
 [![BochilGaming](https://github.com/BochilGaming.png?size=100)](https://github.com/BochilGaming)
  
 ## Thanks For Some Script
- [![Aguz Familia](https://github.com/Fokusdotid.png?size=100)](https://github.com/Fokusdotid) | [![FadliDarmawan](https://github.com/FadliDarmawan.png?size=150)](https://github.com/FadliDarmawan)
- ----|----
-[Aguz Familia](https://github.com/Fokusdotid) | [Fadli](https://github.com/FadliDarmawan)
+ [![Aguz Familia](https://github.com/Fokusdotid.png?size=150)](https://github.com/Fokusdotid) | [![FadliDarmawan](https://github.com/FadliDarmawan.png?size=150)](https://github.com/FadliDarmawan) | [![Rhosad](https://github.com/Rhosad29.png?size=150)](https://github.com/Rhosad29)
+ ----|----|----
+[Aguz Familia](https://github.com/Fokusdotid) | [Fadli](https://github.com/FadliDarmawan)| [Rhosad](https://github.com/Rhosad29)
