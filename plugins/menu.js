@@ -12,7 +12,7 @@ const defaultMenu = {
 └────
 %readmore`.trim(),
   header: '┌─〔 %category 〕',
-  body: '├✓ %cmd %islimit %isPremium',
+  body: '├◉ %cmd %islimit %isPremium',
   footer: '└────\n',
   after: `
 `,
@@ -21,7 +21,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 
   let tags
   let teks = `${args[0]}`.toLowerCase()
-  let arrayMenu = ['all', 'game', 'xp', 'stiker', 'kerangajaib', 'quotes', 'grup', 'premium', 'internet', 'anonymous', 'anime', 'nulis', 'downloader', 'tools', 'fun', 'database', 'islamic', 'audio', 'nsfw', 'info', 'tanpakategori', 'owner', 'random']
+  let arrayMenu = ['all', 'game', 'xp', 'stiker', 'kerangajaib', 'quotes', 'grup', 'premium', 'internet', 'anonymous', 'anime', 'nulis', 'downloader', 'tools', 'fun', 'database', 'islamic', 'audio', 'nsfw', 'info', 'tanpakategori', 'owner']
   if (!arrayMenu.includes(teks)) teks = '404'
   if (teks == 'all') tags = {
     'main': 'Utama',
@@ -35,7 +35,6 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     'internet': 'Internet',
     'anonymous': 'Anonymous Chat',
     'anime': 'Anime',
-    'random': 'Random Image',
     'nulis': 'MagerNulis & Logo',
     'downloader': 'Downloader',
     'tools': 'Tools',
@@ -48,9 +47,6 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     'nsfw': 'Nsfw',
     'info': 'Info',
     '': 'Tanpa Kategori',
-  }
-  if (teks == 'random') tags = {
-    'random': 'Random Image'
   }
   if (teks == 'game') tags = {
     'game': 'Game'
@@ -181,7 +177,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
      let judul = `${ucapan()}, ${name}`.trim()
       const sections = [
       {
-        title: 'List Menu ' ,       
+        title: 'List Menu ' + namabot,       
         rows: [
           { title: `Pemilik Bot[👨‍💻]`, 
            "description": "Nomor Pemilik Bot (owner)",
@@ -191,9 +187,9 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
            "description": "Harap membaca Peraturan demi kenyamanan kita bersama",
            rowId: `${_p} rules` },
 
-          { title: `Topup`, 
-           "description": "Topup keperluan digital. Pulsa, Data, Game, dll",
-           rowId: `.topup` },
+          { title: `Group Official AuraBot[🎊] `, 
+           "description": "Gabung untuk mendapatkan informasi mengenai bot atau sekedar meramaikan",
+           rowId: `${_p} auragc` },
 
           { title: 'Semua Perintah', 
            "description": "Menu Semua Perintah",
@@ -290,15 +286,15 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       }
     ]
       const listMessage = {
-      text: 'Berikut ini adalah daftar menu Rho_Bot.',
-      footer: "Silahkan tekan tombol \"Menu\" untuk melihat sub-menu Rho_Bot.\n\nJika menemukan bug, error atau kesulitan dalam penggunaan silahkan laporkan/tanyakan kepada owner.",
+      text: 'Berikut ini adalah daftar menu AuraBot.',
+      footer: "Silahkan tekan tombol \"Click Here\" untuk melihat sub-menu AuraBot.\n\nJika menemukan bug, error atau kesulitan dalam penggunaan silahkan laporkan/tanyakan kepada owner.",
       mentions: await conn.parseMention(judul),
       title: judul,
-      buttonText: "Menu",
+      buttonText: "Click Here",
       sections
     }
 
-    return conn.sendMessage(m.chat, listMessage, { quoted: m, mentions: await conn.parseMention(judul), contextInfo: { forwardingScore: 2, isForwarded: true }})
+    return conn.sendMessage(m.chat, listMessage, { quoted: m, mentions: await conn.parseMention(judul), contextInfo: { forwardingScore: 99999, isForwarded: true }})
     
     }
 
@@ -349,14 +345,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-
-    let pp1 = await(await fetch('https://telegra.ph/file/a04269b1f8d8de7398e66.jpg')).buffer()
-  await conn.send3ButtonImg(m.chat, pp1, text.trim(), wm, `Owner`, `${_p}owner`, `Topup`, `.topup`, `Donasi`, `${_p}donasi`)
- //   await conn.send2ButtonLoc(m.chat, pp, text.trim(), wm, `Topup`, `${prefix}topup`, 'Donasi', `${prefix}donasi`)
-//await conn.sendTemplateButtonFakeImg(m.chat, pp, text.trim(), wm, 'Topup', `${prefix}topup`,  { mentions: [m.sender] })
-    
-    
-
+   await conn.send3ButtonImg(m.chat, await (await fetch(thumbfoto)).buffer(), text.trim(), wm, `Owner`, `${_p}owner`, `Grup Official`, `${_p}auragc`, `Donasi`, `${_p}donasi`)
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
