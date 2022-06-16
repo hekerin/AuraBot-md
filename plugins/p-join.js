@@ -62,7 +62,7 @@ let handler = async (m, { conn, args, usedPrefix, command, isPrems, isOwner, isR
     }
 }
 handler.help = ['join <link> <time>']
-handler.tags = ['owner']
+handler.tags = ['owner ']
 handler.limit = true
 handler.command = /^(join)$/i
 
