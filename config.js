@@ -31,25 +31,35 @@ global.APIKeys = { // APIKey Here
   'https://api.adiofficial.xyz': 'apikey lu'
 }
 
-//global.wm = '𝑴𝒚𝑩𝒐𝒕-𝑴𝒖𝒍𝒕𝒊 𝑫𝒆𝒗𝒊𝒄𝒆 𝑩𝒚 𝑭𝒐𝒌𝒖𝒔𝑰𝑫'
-global.wait = '_*𝐬𝐞𝐝𝐚𝐧𝐠 𝐝𝐢 𝐩𝐫𝐨𝐬𝐞𝐬 ...*_'
-global.eror = '_*мααƒ ѕєяνєя тι∂αк ѕтαвιℓ..*_'
+//============= Wait and Eror ================//
+global.wait = '「 ⏱️ 」Harap tunggu...'
+global.eror = '「❗」Server ERROR!'
 
 //========Url Template Buttons=========//
 global.dtu = 'ɪɴꜱᴛᴀɢʀᴀᴍ'
-global.urlnya = "https://www.instagram.com/aguzfamilia"
+global.urlnya = "https://www.instagram.com/mas_.giyuu"
 
 //============= callButtons =============//
 global.dtc = 'ᴄᴀʟʟ ᴏᴡɴᴇʀ'
-global.phn = '+62 813-2017-0984'
+global.phn = '+62 813-9322-7036'
+
+//============= Watermark Bot and Sticker =============//
+global.wm = '© AuraBot'
+global.author = '© AuraBot'
+global.packname ='RFIunknown'
+global.namabot = 'AuraBot'
 
 //============= Games ================//
 global.benar = '_*Benar✅*_'
 global.salah = '_*Salah❌*_'
 global.dikit = "dikit lagi, semangat ya :')"
-global.wm = 'AuraBot'
 
 global.multiplier = 100 // The higher, The harder levelup
+
+//============= Thumb And Image ================//
+global.pp = 'https://telegra.ph/file/39bbded9693c9338069fd.jpg'
+global.image = 'https://telegra.ph/file/39bbded9693c9338069fd.jpg'
+global.thumbfoto = 'http://telegra.ph/file/29f2d451412ae151a2dfb.jpg'
 
 //=========== Requirements ==========//
 
