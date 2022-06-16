@@ -1,1 +1,1 @@
-worker: pm2-runtime index.js --family
+web: node . --server
