@@ -25,14 +25,13 @@ let handler = async (m, { conn }) => {
 ├ ${anticall ? '✅' : '❌'} *Anti Call*
 ├ ${backup ? '✅' : '❌'} *Auto Backup DB*
 ├ ${groupOnly ? '✅' : '❌'} *Mode Grup*
-├ ${jadibot ? '✅' : '❌'} *Jadi Bot*
 ├ ${tag ? '✅' : '❌'} *Anti Tag Owner*
 ├ ${self ? '✅' : '❌'} *Mode Self*
 └────
     `.trim())
 }
 handler.help = ['stats']
-handler.tags = ['about']
+handler.tags = ['info']
 handler.command = /^(stat?s?|bot(stat?s?))$/i
 
 module.exports = handler
