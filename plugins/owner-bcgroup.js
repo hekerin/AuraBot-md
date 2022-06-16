@@ -9,9 +9,9 @@ let handler = async (m, { conn, text }) => {
     }
     m.reply('*selesai*')
 }
-handler.help = ['bcloc'].map(v => v + ' <teks>')
+handler.help = ['bcgroup'].map(v => v + ' <teks>')
 handler.tags = ['owner']
-handler.command = /^(broadcast|bc)(loc)$/i
+handler.command = /^(broadcastgroup|bcgroup)(loc)$/i
 
 handler.owner = true
 
