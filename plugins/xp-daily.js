@@ -4,9 +4,9 @@ let handler = async (m, { conn, usedPrefix, isPrems }) => {
   let user = db.data.users[m.sender]
   if (user.level < 1) return await conn.send3Button(m.chat, 'naikan level kamu', wm, 'Level Up', usedPrefix + 'levelup', 'Weekly', usedPrefix + 'weekly', 'Monthly', usedPrefix + 'monthly', m)
   let time = user.lastclaim + 86400000
-  if (new Date - user.lastclaim < 86400000) return await conn.send2Button(m.chat, `Kamu sudah mengklaim klaim harian hari ini\ntunggu selama *🕒${msToTime(time - new Date())}* lagi`, wm, 'menu', usedPrefix + 'menu', 'claim2', usedPrefix + 'claim2', m)
+  if (new Date - user.lastclaim < 86400000) return await conn.send2Button(m.chat, `Kamu sudah mengklaim klaim harian hari ini\ntunggu selama *🕒${msToTime(time - new Date())}* lagi`, wm, 'menu', usedPrefix + 'menu', m)
   user.exp += isPrems ? prem * user.level : free * user.level
-  conn.send2Button(m.chat, `+${isPrems ? prem * user.level : free * user.level} XP\n\nsemakin tinggi level, semakin tinggi juga XP yang didapat`, wm, 'menu', usedPrefix + 'menu', 'claim2', usedPrefix + 'claim2', m)
+  conn.send2Button(m.chat, `+${isPrems ? prem * user.level : free * user.level} XP\n\nsemakin tinggi level, semakin tinggi juga XP yang didapat`, wm, 'menu', usedPrefix + 'menu', m)
   user.lastclaim = new Date * 1
 }
 handler.help = ['daily', 'claim']
