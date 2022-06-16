@@ -17,9 +17,9 @@ let handler = async (m, { conn, command, args, usedPrefix }) => {
     m.reply(msg)
   }
 }
-handler.help = ['google', 'googlef'].map(v => v + ' <pencarian>')
+handler.help = ['google'].map(v => v + ' <pencarian>')
 handler.tags = ['internet']
-handler.command = /^googlef?$/i
+handler.command = /^google?$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
