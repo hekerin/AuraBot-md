@@ -2,7 +2,7 @@ let PhoneNumber = require('awesome-phonenumber')
 let levelling = require('../lib/levelling')
 let fetch = require('node-fetch')
 let handler = async (m, { conn, usedPrefix }) => {
-  global.pp = 'https://i.ibb.co/gS0XrNc/avatar-contact.png'
+  let pp = './src/avatar_contact.png'
   let prefix = usedPrefix
   let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
   try {
@@ -33,8 +33,8 @@ let handler = async (m, { conn, usedPrefix }) => {
     //conn.send2ButtonLoc(m.chat, await (await fetch(pp)).buffer(), str, wm, `Menu`, `${prefix}menu`, 'Claim', `${prefix}claim`)
   }
 }
-handler.help = ['dompet', 'atm']
-handler.tags = ['rpg']
+handler.help = ['profile']
+handler.tags = ['xp']
 handler.command = /^(pp|profile|profil|propil)$/i
 handler.register = false
 module.exports = handler
