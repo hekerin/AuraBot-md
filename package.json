@@ -1,5 +1,5 @@
 {
-    "name": "Family",
+    "name": "AuraBot-md",
     "version": "2.2.5",
     "description": "Simle Bot WhatsApp with Baileys Multi Device",
     "depecrated": false,
@@ -24,21 +24,23 @@
         "mybot-md",
         "family-bot",
         "family-md",
+        "AuraBot",
+        "AuraBot-md",
         "enjela",
         "shiraori-md",
         "stikerin",
         "wabot-aq"
     ],
-    "homepage": "https://github.com/fokusdotid/family-md",
+    "homepage": "https://github.com/RFIunknown/AuraBot-md",
     "author": {
         "name": "Fokus ID"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/fokusdotid/family-md.git"
+        "url": "git+https://github.com/RFIunknown/AuraBot-md.git"
     },
     "bugs": {
-        "url": "https://github.com/fokusdotid/family-md/issues"
+        "url": "https://github.com/RFIunknown/AuraBot-md/issues"
     },
     "license": "GPL-3.0-or-later",
     "dependencies": {
