@@ -28,16 +28,6 @@ module.exports = {
         global.img = pickRandom(global.waifu)
         global.fla = pickRandom(global.flaaa)
         global.namabot = conn.user.name
-        global.packname = global.namabot
-        global.author = global.data.owner
-        global.author = 'memek'
-        global.wm2 = global.data.namabot + ' ' + global.data.owner
-        global.colong1 = 'Ciss 📸'
-        global.colong2 = 'ʙy ᴀɢᴜᴢ ꜰᴀᴍɪʟɪᴀ'
-        global.kontak2 = [
-       ['6281393227036', 'Rifai', 'Developer Bot', 'rfiunknown62@gmail.com', true],
-      ['628892964090', 'Aura', 'Lover', 'Nothing', true],
-        ]
         global.bg = await (await fetch(img)).buffer()
         global.time = require('moment-timezone').tz('Asia/Jakarta').format('HH:mm:ss')
 
