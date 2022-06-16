@@ -9,9 +9,9 @@ let handler  = async (m, { conn, text }) => {
      }
   m.reply('*Broadcast selesai*')
 }
-handler.help = ['broadcast','bc'].map(v => v + ' <teks>')
+handler.help = ['broadcastimg','bcimg'].map(v => v + ' <teks>')
 handler.tags = ['owner']
-handler.command = /^(broadcast|bc)$/i
+handler.command = /^(broadcastimg|bcimg)$/i
 handler.owner = true
 handler.mods = false
 handler.premium = false
