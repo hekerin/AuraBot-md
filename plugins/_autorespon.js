@@ -5,13 +5,14 @@ let handler = m => m
 
 handler.all = async function (m) {
     if (m.chat.endsWith('status@broadcast')) {
-        console.log('sw cok')
+        console.log('Status Wangsaf')
     }
     let { isBanned } = db.data.chats[m.chat]
     let { banned } = db.data.users[m.sender]
     let { group } = db.data.settings
     let setting = db.data.settings
     let user = global.db.data.users[m.sender]
+    
     
     // salam
     let reg = /(ass?alam|اَلسَّلاَمُ عَلَيْكُمْ|السلام عليکم)/i
@@ -21,14 +22,38 @@ handler.all = async function (m) {
     }
     
     // ketika ada yang invite/kirim link grup di chat pribadi
-    if ((m.mtype === 'groupInviteMessage' || m.text.startsWith('https://chat') || m.text.startsWith('Buka tautan ini')) && !m.isBaileys && !m.isGroup) {
-        this.sendButton(m.chat, `┌「 *Undang Bot ke Grup* 」
-├ 7 Hari / Rp 5,000
-├ 30 Hari / Rp 15,000
-└────
+    let isinvit = /chat.whatsapp/i.exec(m.text)
+  if (isinvit && !m.fromMe){
+        this.sendButton(m.chat, `
+╭┈─────────────
+╰──Sewa Bot!*──➤
+
+ * Gratis 1 hari percobaan untuk grup! Agar bot tetap berada di grup anda dengan waktu lebih lama silahkan sewa bot dengan harga dibawah ini
+ * ુོ➪ Info untuk Gabung premium :
+ *〲 Rp. 5k = 1 minggu Premium
+ *〲 Rp. 7k = 2 minggu Premium
+ *〲 Rp. 15k = 1 bulan Premium
+ *〲 Rp. 20k = 2 bulan Premium
+ *〲 Rp. 30k = 3 bulan Premium
+ *〲 Rp. 40k = 4 bulan Premium
+ *〲 Rp. 50k = VIP PERMANEN
+ 
+•°°°🕊°°°°°🕊°°°°°🕊°°°°°
 `.trim(), wm, 'Pemilik Bot', '.owner', m)
     }
-
+   let istiktok = /(tiktok.com)/i.test(m.text)
+    if (m.text.startsWith('https://') && istiktok && !m.fromMe) {
+       this.sendButton(m.chat, `*terdeteksi link Tiktok yang dikirim*\nbisa langsung Download dengan pencet tombol dibawah 👇`, wm, 'Download', `.tt ${m.text}`, m)
+    }
+   let isyt = /(?:https?:\/\/)?(?:www\.)?youtu(?:\.be\/|be.com\/\S*(?:(?:(?=\/[-a-zA-Z0-9_]{11,}(?!\S))\/)|(?:\S*v=|v\/)))([-a-zA-Z0-9_]{11,})/g.test(m.text)
+    if (m.text.startsWith('https://') && isyt && !m.fromMe) {
+       this.send2Button(m.chat, `*terdeteksi link dari Youtube yang dikirim*\nbisa langsung Download dengan pencet tombol dibawah 👇`, wm, 'Video', `.ytmp4 ${m.text}`,'Audio', `.ytmp3 ${m.text}`, m)
+    }
+   let isinsta = /(?:(?:http|https):\/\/)?(?:www.)?(?:instagram.com|instagr.am|instagr.com)\/(\w+)/g.test(m.text)
+    if (m.text.startsWith('https://') && isinsta && !m.fromMe) {
+       this.sendButton(m.chat, `*terdeteksi link Instagram yang dikirim*\nbisa langsung Download dengan pencet tombol dibawah 👇`, wm, 'Download', `.ig ${m.text}`, m)
+    }
+  
     if (m.isGroup) {
     if (m.fromMe) return
     if (m.mentionedJid.includes(this.user.jid) && m.isGroup) {
