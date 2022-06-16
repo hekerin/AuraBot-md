@@ -5,7 +5,7 @@ let handler = async (m, { conn }) => {
   m.reply(total)
 }
 handler.help = ['totalfitur']
-handler.tags = ['main']
+handler.tags = ['info']
 handler.command = /^(total)?fitur$/i
 
 module.exports = handler
