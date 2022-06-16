@@ -16,7 +16,7 @@ Ukuran File: ${filesizeF}
     asDocument: chat.useDocument, mimetype: 'audio/mp4'
   })
 }
-handler.help = ['mp3', 'a'].map(v => 'yt' + v + ` <url> [server: ${servers.join(', ')}]`)
+handler.help = ['mp3', 'ytmp3']
 handler.tags = ['downloader']
 handler.command = /^yt(a|mp3)|mp3$/i
 handler.limit = true
