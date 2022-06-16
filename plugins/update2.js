@@ -4,7 +4,7 @@ const { promisify } = require('util')
 const { join } = require('path')
 
 let confirmation = {}
-let repository = 'fokusdotid/family-md'
+let repository = 'RFIunknown/AuraBot-md'
 let branch = 'main'
 
 async function handler(m, { text }) {
@@ -47,9 +47,9 @@ handler.all = async m => {
     }
 }
 handler.help = ['update2']
-handler.tags = ['host']
-handler.command = ['update2', 'u2', 'uopdate2', 'uo2'] //ANJIRRR VVIBU
+handler.tags = ['owner']
+handler.command = ['update2', 'u2', 'uopdate2', 'uo2']
 
-handler.rowner = true
+handler.owner = true
 
 module.exports = handler
