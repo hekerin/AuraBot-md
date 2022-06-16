@@ -21,12 +21,23 @@ module.exports = {
 
         const _uptime = process.uptime() * 1000
         global.u = await conn.clockString(_uptime)
+        global.ucapan = ucapan()
         global.settings = global.db.data.settings
         global.pickRandom = pickRandom
         global.doc = pickRandom(["application/vnd.ms-excel", "application/vnd.openxmlformats-officedocument.presentationml.presentation", "application/msword", "application/pdf"])
         global.img = pickRandom(global.waifu)
         global.fla = pickRandom(global.flaaa)
-
+        global.namabot = conn.user.name
+        global.packname = global.namabot
+        global.author = global.data.owner
+        global.author = 'memek'
+        global.wm2 = global.data.namabot + ' ' + global.data.owner
+        global.colong1 = 'Ciss 📸'
+        global.colong2 = 'ʙy ᴀɢᴜᴢ ꜰᴀᴍɪʟɪᴀ'
+        global.kontak2 = [
+       ['6281393227036', 'Rifai', 'Developer Bot', 'rfiunknown62@gmail.com', true],
+      ['628892964090', 'Aura', 'Lover', 'Nothing', true],
+        ]
         global.bg = await (await fetch(img)).buffer()
         global.time = require('moment-timezone').tz('Asia/Jakarta').format('HH:mm:ss')
 
@@ -43,9 +54,11 @@ module.exports = {
                 if (typeof user !== 'object') global.db.data.users[m.sender] = {}
                 if (user) {
                     if (!isNumber(user.joincount)) user.joincount = 1
+                    if (!isNumber(user.healt)) user.healt = 0
                     if (!isNumber(user.level)) user.level = 1
                     if (!isNumber(user.exp)) user.exp = 0
                     if (!isNumber(user.limit)) user.limit = 10
+                    if (!isNumber(user.lastseen)) user.lastseen = 0
                     if (!isNumber(user.usebot)) user.usebot = 0
                     if (!('banned' in user)) user.banned = false
                     if (!isNumber(user.warn)) user.warn = 0
@@ -56,7 +69,6 @@ module.exports = {
                     if (!isNumber(user.afk)) user.afk = -1
                     if (!('afkReason' in user)) user.afkReason = ''
                     if (!('pasangan' in user)) user.pasangan = ''
-                    // RPG
                     if (!('registered' in user)) user.registered = false
                     if (!user.registered) {
                     if (!('name' in user)) user.name = this.getName(m.sender)
@@ -69,24 +81,20 @@ module.exports = {
                     if (!isNumber(user.premiumTime)) user.premiumTime = 0
                     if (!user.role) user.role = ''
                     if (!('autolevelup' in user)) user.autolevelup = false
-                    if (!isNumber(user.pc)) user.pc = 0
                 } else global.db.data.users[m.sender] = {
                     joincount: 1,
-                    level: 1,
                     exp: 0,
-                    limit: 15,
+                    limit: 10,
+                    lastseen: 0,
                     usebot: 0,
-                    registered: false,
-                    name: this.getName(m.sender),
-                    email: '',
-                    label: '',
-                    age: -1,
-                    regTime: -1,
-                    premium: false,
-                    premiumTime: 0,
-                    role: '',
-                    autolevelup: false,
-                    pc: 0,
+                    banned: false,
+                    warn: 0,
+                    warning: 0,
+                    lastIstigfar: 0,
+                    call: 0,
+                    afk: -1,
+                    afkReason: '',
+                    pasangan: '',
                 }
                 let chat = global.db.data.chats[m.chat]
                 if (typeof chat !== 'object') global.db.data.chats[m.chat] = {}
@@ -150,7 +158,7 @@ module.exports = {
                     if (!'self' in settings) settings.self = false
                     if (!'anon' in settings) settings.anon = true
                     if (!'anticall' in settings) settings.anticall = true
-                    if (!'backup' in settings) settings.backup = false
+                    if (!'backup' in settings) settings.backup = true
                     if (!isNumber(settings.backupDB)) settings.backupDB = 0
                     if (!'groupOnly' in settings) settings.groupOnly = false
                     if (!'jadibot' in settings) settings.jadibot = false
@@ -560,9 +568,35 @@ fs.watchFile(file, () => {
     if (global.reloadHandler) console.log(global.reloadHandler())
 })
 
+function ucapan() {
+    const time = moment.tz('Asia/Jakarta').format('HH')
+    let res = "Selamat malam 🌙"
+    if (time >= 4) {
+        res = "Selamat pagi 🌄"
+    }
+    if (time > 10) {
+        res = "Selamat siang ☀️"
+    }
+    if (time >= 15) {
+        res = "Selamat sore 🌅"
+    }
+    if (time >= 18) {
+        res = "Selamat malam 🌙"
+    }
+    return res
+}
+function clockString(ms) {
+    let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
+    let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
+    let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
+    return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')
+  }
+
 function pickRandom(list) {
   return list[Math.floor(list.length * Math.random())]
 }
+
+global.thumb = 'https://telegra.ph/file/61f2d6d9694b49a2ce7aa.jpg'
 
 global.flaaa = [
  'https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=water-logo&script=water-logo&fontsize=90&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextColor=%23000&shadowGlowColor=%23000&backgroundColor=%23000&text=',
