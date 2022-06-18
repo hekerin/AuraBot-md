@@ -6,10 +6,10 @@ services:
       - "8000:5000"
     volumes:
       - .:/code
-      - game_rev2:/var/log
+      - aurabot:/var/log
     links:
       - redis
   redis:
     image: redis
 volumes:
-  game_rev2: {}
+  aurabot: {}
