@@ -4,6 +4,7 @@ const {
   useSingleFileAuthState,
   DisconnectReason
 } = require('@adiwajshing/baileys')
+const cloudDBAdapter = require('./lib/cloudDBAdapter')
 const { generate } = require('qrcode-terminal')
 const WebSocket = require('ws')
 const path = require('path')
