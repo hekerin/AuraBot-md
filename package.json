@@ -10,7 +10,7 @@
         "plugins": "plugins"
     },
     "scripts": {
-        "start": "node index.js",
+        "start": "node . --server",
         "mongo": "node . --db 'isi mongodb mu'",
         "test": "node test.js",
         "test2": "nodemon index.js --server --autocleartmp"
